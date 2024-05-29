@@ -22,7 +22,6 @@
 
     td_lock: tap_dance_lock {
       compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_LOCK";
       #binding-cells = <0>;
       tapping-term-ms = <TAPPING_TERM>;
       bindings = <&kp LG(LC(Q))>, <&kp LG(LA(C_EJECT))>;
@@ -58,13 +57,11 @@
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings = <&kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S>;
-      label = "GIT_STATUS";
     };
     git_commit_all: git_commit_all {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings = <&kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp A &kp MINUS &kp M &kp SPACE &kp DQT &kp DQT &kp LEFT_ARROW>;
-      label = "GIT_COMMIT";
     };
   };
 
@@ -72,7 +69,7 @@
     compatible = "zmk,keymap";
 
     base_layer {
-      label = "BASE";
+      display-name = "BASE";
       bindings = <
 &mt LC(LS(LALT)) TAB  &kp Q  &kp W  &kp E         &kp R           &kp T       &kp Y      &kp U           &kp I      &kp O    &kp P      &kp MINUS
 &kp LSHIFT            &kp A  &kp S  &kp D         &kp F           &kp G       &kp H      &kp J           &kp K      &kp L    &kp SEMI   &kp SINGLE_QUOTE
@@ -82,7 +79,7 @@
     };
 
     symbols_layer {
-      label = "SYMBOLS";
+      display-name = "SYMBOLS";
       bindings = <
 &trans   &kp N1    &kp N2  &kp N3    &kp N4    &kp N5     &kp N6    &kp N7  &kp N8    &kp N9    &kp N0  &trans
 &kp ESC  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTERISK  &kp LPAR          &kp RPAR           &trans
@@ -92,7 +89,7 @@
     };
 
     nav_layer {
-      label = "NAV";
+      display-name = "NAV";
       bindings = <
 &kp LG(LC(TAB))          &trans  &kp LG(LEFT_BRACKET)  &kp LS(TAB)        &kp TAB          &kp LG(RIGHT_BRACKET)    &kp LA(LEFT)       &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  &trans  &trans
 &kp ESC           &trans  &trans                &kp K_SCROLL_DOWN  &kp K_SCROLL_UP  &trans                   &kp LEFT           &kp DOWN      &kp UP      &kp RIGHT      &trans  &trans
@@ -102,7 +99,7 @@
     };
 
     extended_layer {
-      label = "EXT";
+      display-name = "EXT";
       bindings = <
 &trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6           &kp F7           &kp F8           &kp F9                &kp F10               &kp F12
 &kp K_PP  &kp K_PREV        &kp K_NEXT     &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans &trans &trans           &trans
